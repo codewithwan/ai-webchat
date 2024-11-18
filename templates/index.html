@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1>AI Chat</h1>
+            <button onclick="deleteAllMessages()" aria-label="Delete all messages" class="delete-all-btn">Delete</button>
+        </header>
+        <div id="chat-box" class="chat-box"></div>
+        <div class="input-container">
+            <label for="user-input" class="visually-hidden">Type your message here</label>
+            <input type="text" id="user-input" placeholder="Type your message here..." aria-label="User input">
+            <button onclick="sendMessage()" aria-label="Send message">Send</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
